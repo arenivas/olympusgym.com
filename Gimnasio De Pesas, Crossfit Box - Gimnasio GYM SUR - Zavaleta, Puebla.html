@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://www.gymsur.com/ -->
+<html class="js canvas canvastext hashchange history draganddrop multiplebgs backgroundsize opacity cssanimations cssgradients csstransitions fontface video audio localstorage sessionstorage" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	
+	<title>Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla</title>
+	<meta name="description" content="1800m2 de instalaciones, cardio, toneladas de peso libre e integrado, clases de box, yoga, crossfit, trx tai chi, regaderas, estacionamiento, instructores gimnasio de pesas">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS
+  ================================================== -->
+	<link href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/bootstrap.css">
+<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/flexslider.css">
+<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/jquery.fancybox.css">
+<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/style.css">
+<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/mediaqueries.css">
+<link rel="stylesheet" href="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/default.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="http://www.gymsur.com/#">
+	<link rel="apple-touch-icon" href="http://www.gymsur.com/#">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.gymsur.com/#">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.gymsur.com/#">
+
+	<script async="" src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/analytics.js.descarga"></script><script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/modernizr.js.descarga"></script>
+
+	
+        <!-- Hammer reload -->
+          <script>
+           /* setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)*/
+          </script>
+        <!-- /Hammer reload -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49322600-1', 'mecanicaextrema.com');
+  ga('send', 'pageview');
+
+</script>  
+<script>/* jshint browser:true */
+
+var starkHelpers = {
+  getElementByLocators: function(locators) {
+    var selector = null;
+    for (var index = 0; index < locators.length; index++) {
+      if (locators[index].type === 'css_selector') {
+        selector = locators[index].value;
+        break;
+      }
+    }
+    if (selector === null) {
+      return null;
+    }
+
+    var allElements = document.querySelectorAll(selector);
+    if (allElements.length < 1) {
+      return null;
+    } else if (allElements.length > 1) {
+      console.log(
+        'Found ' + allElements.length.toString() + ' for: ', selector);
+    }
+    return allElements[0];
+  },
+  JSON: {
+    parse: function(data) {
+      if (JSON.parse) {
+        return JSON.parse(data);
+      } else {
+        return (new Function('return ' + data))();  // jshint ignore:line
+      }
+    }
+  },
+  copyStyles: function(sourceElement, targetElement) {
+    if (!sourceElement || !targetElement) {
+      return;
+    }
+
+    if (!window.getComputedStyle) {
+      return;
+    }
+
+    var style;
+    var stylesArray = [];
+
+    style = window.getComputedStyle(sourceElement, '');
+    for (var index = 0; index < style.length; index++) {
+      stylesArray.push(
+        style[index] + ':' + style.getPropertyValue(style[index]));
+    }
+
+    targetElement.style.cssText = stylesArray.join(';');
+  }
+};
+
+var starkDOMEditPlayer = new function() {  // jshint ignore:line
+
+  this.applyEdit = function(edit) {
+    var element = starkHelpers.getElementByLocators(edit.locators);
+    if (!element) {
+      console.log('Unable to find: ', edit.selector);
+      return;
+    }
+    if (edit.editText !== undefined) {
+      var newElement;
+
+      if (edit.extraParameters.insertBefore &&
+          edit.modificationType === 'headline') {
+        newElement = document.createElement('h1');
+        newElement.textContent = edit.editText;
+        element.parentElement.insertBefore(newElement, element);
+      } else if (edit.modificationType == 'headline' &&
+          edit.extraParameters.addFirstChild) {
+        newElement = document.createElement('h1');
+        newElement.textContent = edit.editText;
+        if (element.childNodes.length > 0) {
+          element.insertBefore(newElement, element.childNodes[0]);
+        } else {
+          element.appendChild(newElement);
+        }
+      } else if (edit.extraParameters && edit.extraParameters.promoteTo) {
+
+        if (!element.firstElementChild) {
+          newElement = document.createElement(
+            edit.extraParameters.promoteTo.tagName);
+          newElement.textContent = edit.editText;
+
+          starkHelpers.copyStyles(element, newElement);
+
+          newElement.className = element.className;
+          newElement.id = element.id;
+          element.parentNode.replaceChild(newElement, element);
+        } else {
+          element.outerHTML = edit.new;
+        }
+      } else if (edit.extraParameters && edit.extraParameters.wrapElement) {
+        newElement = document.createElement(
+          edit.extraParameters.wrapElement.tagName);
+        var parent = element.parentNode;
+        var sibling = element.nextSibling;
+
+        starkHelpers.copyStyles(element, newElement);
+
+        newElement.className = element.className;
+        newElement.id = element.id;
+        newElement.appendChild(element);
+
+        // Updating the wrapped element text to the updated text
+        element.textContent = edit.editText;
+
+        if (sibling) {
+          parent.insertBefore(newElement, sibling);
+        } else {
+          parent.appendChild(newElement);
+        }
+      } else {
+        element.textContent = edit.editText;
+      }
+    }
+  };
+
+  this.applyEdits = function(edits) {
+    for (var index = 0; index < edits.length; index++) {
+      this.applyEdit(edits[index]);
+    }
+  };
+
+  this.setEditsDebugData = function(data) {
+    var element = document.getElementById('starkEditsDebugData');
+    if (!element) {
+      element = document.createElement('meta');
+      element.setAttribute('id', 'starkEditsDebugData');
+      element.setAttribute('name', 'starkEditsDebugData');
+      document.head.appendChild(element);
+    }
+
+    element.setAttribute('content', JSON.stringify(data));
+  };
+
+  this.getEditsDebugData = function() {
+    var element = document.getElementById('starkEditsDebugData');
+    return JSON.parse(element.getAttribute('content'));
+  };
+
+  // TODO(sbw) detect support for observers, fallback to mutation events.
+  this.applyEditsToDynamicSite = function(editsArray, debug) {
+    // Convert array to associative array.
+    var edits = editsArray.reduce(function(o, v, i) {
+      o[i] = v; return o; }, {});
+    if (debug) {
+      var starkEditsDebugData = {
+        appliedEdits: {},
+        pendingEdits: edits
+      };
+      this.setEditsDebugData(starkEditsDebugData);
+    }
+    var outerThis = this;
+    // NOTE(sbw) this assumes textContent doesn't change.
+    var config = {subtree: true, childList: true};
+    var observer = new MutationObserver(function(mutations) {
+      var appliedEdits = [];
+      for (var editKey in edits) {
+        var edit = edits[editKey];
+        var element = starkHelpers.getElementByLocators(edit.locators);
+        if (element) {
+          outerThis.applyEdit(edit);
+          appliedEdits.push(editKey);
+        }
+      }
+
+      for (var index = 0; index < appliedEdits.length; index++) {
+        if (debug) {
+          starkEditsDebugData.appliedEdits[appliedEdits[index]] =
+            edits[appliedEdits[index]];
+        }
+        delete edits[appliedEdits[index]];
+        if (debug) {
+          outerThis.setEditsDebugData(starkEditsDebugData);
+        }
+      }
+
+      if (Object.keys(edits).length === 0) {
+        observer.disconnect();
+      }
+    });
+    observer.observe(document, config);
+  };
+}();
+starkDOMEditPlayer.applyEditsToDynamicSite(starkHelpers.JSON.parse(decodeURIComponent("%5B%7B%22tracking%22%3A%7B%22id%22%3A%2211587371%22%7D%2C%22originalText%22%3A%22%5Cn%5Ct%5Ct25%20a%C3%B1os%20de%20experiencia%2C%20si%20lo%20que%20buscas%20es%20un%20gimnasio%20sin%20lujos%2C%20bien%20equipado%20y%20limpio%2C%20aqu%C3%AD%20te%20esperamos.%20%5Cn%5Ct%22%2C%22editText%22%3A%22%5Cn%5Ct%5Ct30%20a%C3%B1os%20de%20experiencia%2C%20si%20lo%20que%20buscas%20es%20un%20gimnasio%20de%20pesas%20y%20clases%2C%20%20muy%20grande%20%2C%20bien%20equipado%20y%20limpio%2C%20aqu%C3%AD%20te%20esperamos.%20%5Cn%5Ct%22%2C%22modificationType%22%3A%22content%22%2C%22extraParameters%22%3A%7B%22isTextReplace%22%3Atrue%7D%2C%22old%22%3A%22%5Cn%5Ct%5Ct25%20a%C3%B1os%20de%20experiencia%2C%20si%20lo%20que%20buscas%20es%20un%20gimnasio%20sin%20lujos%2C%20bien%20equipado%20y%20limpio%2C%20aqu%C3%AD%20te%20esperamos.%20%5Cn%5Ct%22%2C%22mode%22%3A%22first%22%2C%22locators%22%3A%5B%7B%22type%22%3A%22css_selector%22%2C%22value%22%3A%22%23footer%20%3E%20DIV%3Anth-child(1)%20%3E%20DIV%3Anth-child(1)%20%3E%20DIV%3Anth-child(2)%20%3E%20ASIDE%20%3E%20DIV%22%7D%5D%2C%22new%22%3A%22%5Cn%5Ct%5Ct30%20a%C3%B1os%20de%20experiencia%2C%20si%20lo%20que%20buscas%20es%20un%20gimnasio%20de%20pesas%20y%20clases%2C%20%20muy%20grande%20%2C%20bien%20equipado%20y%20limpio%2C%20aqu%C3%AD%20te%20esperamos.%20%5Cn%5Ct%22%2C%22type%22%3A%22replace%22%7D%5D")), false)</script><style type="text/css">.fancybox-margin{margin-right:17px;}</style><script type="text/javascript" charset="UTF-8" src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/common.js.descarga"></script><script type="text/javascript" charset="UTF-8" src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/util.js.descarga"></script></head>
+<body class="home" style=""><div id="mobilemenu" class="mm-menu mm-is-menu mm-horizontal"><div class="mm-inner"><ul class="group mm-opened" id="mm-p1-0">
+		<li class="current">
+			<a class="current" href="http://www.gymsur.com/index.html">Inicio</a>
+		</li>
+        <li>
+			<a href="http://www.gymsur.com/conocenos.html">Conócenos</a>
+		</li>
+		<li>
+			<a href="http://www.gymsur.com/blog.html">Blog</a>
+		</li>
+		<li>
+			<a class="mm-subopen" href="http://www.gymsur.com/#mm-s1-0"></a><a href="http://www.gymsur.com/servicios.html">Servicios</a>
+			
+		</li>
+		<li>
+			<a href="http://www.gymsur.com/contact.html">Contáctanos</a>
+		</li>
+	</ul><ul class="mm-submenu" id="mm-s1-0"><li class="mm-subtitle"><a class="mm-subclose" href="http://www.gymsur.com/#mm-p1-0">Servicios</a></li>
+				<li><a href="http://www.gymsur.com/preventivo.html">Preventivo</a></li>
+				<li><a href="http://www.gymsur.com/correctivo.html">Correctivos</a></li>
+				<li><a href="http://www.gymsur.com/altodesempeno.html">Alto Desempeño</a></li>
+				<li><a href="http://www.gymsur.com/motos.html">Motocicletas</a></li>
+              <li><a href="http://www.gymsur.com/recursos.html">Recursos Técnicos</a></li>
+              <li><a href="http://www.gymsur.com/clasicos.html">Autos Clásicos</a></li>
+               <li><a href="http://www.gymsur.com/todoterreno.html">Todo Terreno</a></li>
+			</ul></div></div> 
+<div class="mm-page"><div id="mobile-bar">
+	<a class="menu-trigger" href="http://www.gymsur.com/#mobilemenu"></a>
+	<h1 class="mob-title">Inicio gimnasio de pesas en zavaleta </h1>
+</div><div id="page">
+	<header id="header">
+	  <div class="container">
+			<div class="col-sm-4" style="position:relative; z-index:10000">
+            	
+			  <h1 id="logo"><a class="current" href="http://www.gymsur.com/index.html"><img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/logo.png" alt=""></a></h1>
+	    </div>
+
+			<div class="col-sm-8">
+				<nav id="nav">
+	<ul id="navigation" class="group sf-js-enabled sf-arrows">
+		<li class="current">
+			<a class="current" href="http://www.gymsur.com/index.html">Inicio</a>
+		</li>
+        <li>
+			<a href="http://www.gymsur.com/conocenos.html">Conócenos</a>
+		</li>
+		
+		<li class="">
+			<a href="http://www.gymsur.com/instalaciones.html" class="sf-with-ul">Servicios</a>
+			<ul style="display: none;">
+				
+				<li><a href="http://www.gymsur.com/instalaciones.html">Instalaciones</a></li>
+				<li><a href="http://www.gymsur.com/horarios.html">Horarios</a></li>
+				<li><a href="http://www.gymsur.com/tarifas.html">Tarifas</a></li>
+            
+			</ul>
+		</li>
+        <li>
+			<a href="http://www.gymsur.com/blog.html">Salud</a>
+		</li>
+        
+		<li>
+			<a href="http://www.gymsur.com/contact.html">Contáctanos</a>
+		</li>
+	</ul><!-- #navigation -->
+</nav><!-- #nav -->
+			</div>
+		</div>
+	</header>
+
+	<div id="slideshow" class="flexslider">
+		<ul class="slides">
+			<li style="background: url(&quot;images/banner01.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>Inspiración &amp; Constancia </h3>
+								<a class="button" href="http://www.gymsur.com/conocenos.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+            <li style="background: url(&quot;images/banner06.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>Las mejores instalaciones.</h3>
+								<a class="button" href="http://www.gymsur.com/instalaciones.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background: url(&quot;images/banner02.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>Actividades para toda la Semana</h3>
+								<a class="button" href="http://www.gymsur.com/horarios.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+            
+            <li style="background: url(&quot;images/banner03.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>Ambiente 100% deportivo   </h3>
+								<a class="button" href="http://www.gymsur.com/instalaciones.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background: url(&quot;images/banner04.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>Mente sana, cuerpo sano</h3>
+								<a class="button" href="http://www.gymsur.com/blog.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background: url(&quot;images/banner05.jpg&quot;) center top no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-lg-5">
+							<div class="sld-info">
+								<h3>+ Resistencia = +Energía</h3>
+								<a class="button" href="http://www.gymsur.com/instalaciones.html">Ver más</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+                        
+		</ul>
+	<ul class="flex-direction-nav"><li><a class="flex-prev" href="http://www.gymsur.com/#"></a></li><li><a class="flex-next" href="http://www.gymsur.com/#"></a></li></ul></div>
+	
+	<main id="main" class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="widget home-popular-classes">
+					<h3 class="s-title">Áreas de Servicio</h3>
+					<div class="row">
+						<div class="col-md-3 col-xs-6 item">
+							<a href="http://www.gymsur.com/instalaciones.html">
+								<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/serv_01.jpg" width="700" height="504" alt="Placeholder Image">
+								<div class="item-desc">
+									<h4>INSTALACIONES</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6 item">
+							<a href="http://www.gymsur.com/horarios.html">
+								<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/serv_02.jpg" width="700" height="504" alt="Placeholder Image">
+								<div class="item-desc">
+									<h4>HORARIOS</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6 item">
+							<a href="http://www.gymsur.com/tarifas.html">
+								<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/serv_03.jpg" width="700" height="504" alt="Placeholder Image">
+								<div class="item-desc">
+									<h4>TARIFAS ACCESIBLES</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-3 col-xs-6 item">
+							<a href="http://www.gymsur.com/blog.html">
+								<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/serv_04.jpg" width="700" height="504" alt="Placeholder Image">
+								<div class="item-desc">
+									<h4>SALUDABLE</h4>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget promo">
+	<div class="promo-inner group" style="background: url(&#39;images/logo02.jpg&#39;) no-repeat">
+		<h3>TOMA ACCIONES PARA UNA MEJOR VIDA </h3>
+		<a class="button read-more" href="http://www.gymsur.com/contact.html">Contáctanos Ahora</a>
+	</div>
+</div>
+
+				<div class="row">
+					<div class="col-lg-9 col-sm-8">
+						<h3 class="s-title">Noticias y promociones</h3>
+					
+<article class="row entry">
+	<div class="col-lg-1 visible-lg">
+		<time datetime="2013-10-10">01 <span>PROMO</span></time>
+	</div>
+
+	<div class="col-md-12 col-lg-11">
+		<div class="entry-wrap">
+			<figure class="entry-thumb">
+				<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/noti02_promo.jpg" alt="">
+				<time datetime="2013-10-10" class="hidden-lg">9 <span>Serv.</span></time>
+			</figure>
+
+			<div class="entry-content">
+				<h1 class="entry-title"><a href="http://www.gymsur.com/#">Promociones permanentes, planes a la medida </a></h1>
+                <h1 class="entry-title"><a href="http://www.gymsur.com/#">INSCRIPCION GRATIS EN CUALQUIER MODALIDAD DE PAGO </a></h1>
+				<div class="entry-meta">
+					
+                   <br>
+                    <p></p>
+ ➢ Ademas los menores de 22 años tienen un descuento del 25% en cualquier forma de pago.<br>
+ ➢ Tarifas especiales en horario limitado de 10:00am a 5:30pm. <br>
+<br><br>
+
+<br>
+<br>
+					    
+					  <p></p>
+				</div>
+<p>			    Si tienes alguna duda o requieres alguna asesoría escríbenos y con gusto te atenderemos.
+  
+  
+  
+  Informes:  (222) 284 7398<br>
+				  </p>
+
+				<!--<a class="button read-more" href="preventivo.html">Leer más</a>-->
+			</div>
+		</div>
+	</div>
+</article>
+
+
+					</div>
+
+					<div class="col-lg-3 col-sm-4 sidebar">
+						<aside class="widget post-type">
+	<h3 class="s-title">VIDEO RECOMENDADO </h3>
+	<div class="row">
+		<div class="col-sm-12 col-xs-6 item">
+			<a href="https://www.youtube.com/watch?v=PB_aNQ7oSQc" target="_blank">
+				<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/articulo01.jpg" width="700" height="504" alt="Placeholder Image">
+				<div class="item-desc">
+					<h4>Calentamiento Muscular</h4>
+					<b>Ejercicio</b>
+				</div>
+			</a>
+		</div>
+
+		<div class="col-sm-12 col-xs-6 item">
+			<a href="https://www.youtube.com/watch?v=6lvJkOro6So">
+				<img src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/articulo02.jpg" width="700" height="504" alt="Placeholder Image">
+				<div class="item-desc">
+					<h4>Ejercicios abdomen</h4>
+					<b>Ejercicio de la semana</b>
+				</div>
+			</a>
+		</div>
+	</div>
+</aside>
+
+						<aside class="widget widget_ci_schedule_widget three columns"><h3 class="widget-title"><span> Horarios de Servicio</span></h3>			<table class="opening-hours">
+	<tbody><tr>
+		<th>Lunes a Viernes</th>
+		<td>6:00am - 22:30pm</td>
+	</tr>
+	<tr>
+		<th>Sábados y Domingos</th>
+		<td>9:00am - 15:30pm</td>
+	</tr>
+	</tbody></table>
+</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-xs-12">
+				<aside class="widget widget_text group">
+	<h3 class="widget-title">Expertos </h3>
+	<p>Un cuerpo estético no es el objetivo, es la consecuencia lógica, es el premio que obtiene después de varios años de esfuerzo aquel que se decide por un estilo de vida sano y sin vicios. gimnasio de pesas fitness maquinas de ejercicios</p>
+</aside><!-- /widget -->
+			</div>
+			<div class="col-sm-3 col-xs-12">
+				<aside class="widget widget_ci_about group">
+	<h3 class="widget-title">GYM SUR</h3>
+	<div class="widget_about group">
+		30 años de experiencia, si lo que buscas es un gimnasio de pesas y clases,  muy grande , bien equipado y limpio, aquí te esperamos. 
+	</div>
+</aside>
+			</div>
+			<div class="col-sm-3 col-xs-12">
+				<aside class="widget widget_ci_twitter_widget group">
+	<h3 class="widget-title">Redes sociales</h3>
+
+	<div class="twitter_update_list">
+		<ul>
+		  Facebook
+		  <li><span></span>
+				<a class="twitter-time" href="https://www.facebook.com/gymsurpuebla">Ver más</a>
+			</li>
+
+			<li>Twitter<span></span>
+				<a class="twitter-time" href="https://twitter.com/GYMSUR">Ver más</a>
+			</li>
+
+			<!--<li>Flickr<span></span>
+				<a class="twitter-time" href="https://www.flickr.com/photos/121008978@N03/">Ver más</a>-->
+			
+		</ul>
+	</div>
+</aside>
+			</div>
+			<div class="col-sm-3 col-xs-12">
+				
+				<aside class="widget widget_text group">
+	<h3 class="widget-title">TE ESPERAMOS</h3>
+	<p>La atmósfera es la de un lugar donde básicamente vas a hacer ejercicio, en un ambiente tranquilo, sencillo, agradable y limpio....</p>
+</aside><!-- /widget -->
+			</div>
+		</div>
+		<hr>
+		<div class="credits">
+			<div class="row">
+				<div class="col-sm-6">
+					<p>COPYRIGHT / GYM SUR</p>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div></div>
+ <!-- #page -->
+
+
+<!-- Javascript
+================================================== -->
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/js"></script>
+
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/jquery-1.10.1.min.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/superfish.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/jquery.flexslider-min.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/jquery.mmenu.min.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/jquery.fancybox.pack.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/contact.js.descarga"></script>
+<script src="./Gimnasio De Pesas, Crossfit Box - Gimnasio GYM SUR - Zavaleta, Puebla_files/scripts.js.descarga"></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="js/selectivizr-min.js"></script>
+<![endif]-->
+
+<div id="mm-blocker"></div></body></html>
